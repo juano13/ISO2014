@@ -1,22 +1,20 @@
 <?php
 /* @var $this AutorController */
 /* @var $model Autor */
-
 $this->breadcrumbs=array(
-	'Autors'=>array('index'),
-	$model->AUT_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Autor'=>array('admin'),
+	$model->AUT_NOMBRE,
 );
 
 $this->menu=array(
-	array('label'=>'List Autor', 'url'=>array('index')),
-	array('label'=>'Create Autor', 'url'=>array('create')),
-	array('label'=>'Update Autor', 'url'=>array('update', 'id'=>$model->AUT_CORREL)),
-	array('label'=>'Delete Autor', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->AUT_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Autor', 'url'=>array('admin')),
+	array('label'=>'Editar Autor', 'url'=>array('update', 'id'=>$model->AUT_CORREL)),
+	array('label'=>'Borrar Autor', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->AUT_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Autor #<?php echo $model->AUT_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Autor',$model->AUT_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

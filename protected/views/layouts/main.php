@@ -98,6 +98,7 @@ array(
     'items' => array(
         array('label' => 'Inicio','url' => array('/Site/Index'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Publicaciones','url' => array('/publicacion/index'),'visible' => !Yii::app()->user->isGuest),
+        array('label' => 'Autores','url' => array('/Autor/admin'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Acerca de nosotros','url' => array('/site/about'),'visible' => !Yii::app()->user->isGuest),
          array('label' =>'Contactenos','url' => array('/Site/contact'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Informes','url' => array('/Informe/index'),'visible' => !Yii::app()->user->isGuest),

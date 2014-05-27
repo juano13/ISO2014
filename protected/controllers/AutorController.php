@@ -60,9 +60,11 @@ class AutorController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new Autor;
+		$aut_pub= new AutorHasPublicacion;
+		$aut_pub->PUB_CORREL=$id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +72,11 @@ class AutorController extends Controller
 		if(isset($_POST['Autor']))
 		{
 			$model->attributes=$_POST['Autor'];
-			if($model->save())
+			if($model->save()){
+				$aut_pub->AUT_CORREL=$model->AUT_CORREL;
+				$aut_pub->save();
 				$this->redirect(array('view','id'=>$model->AUT_CORREL));
+			}
 		}
 
 		$this->render('create',array(

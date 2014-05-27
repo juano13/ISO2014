@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Editar Libro', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
 	array('label'=>'Borrar Libro', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Agregar Autor', 'url'=>array('//Autor/create', 'id'=>$model->PUB_CORREL)),
 	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
