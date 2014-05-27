@@ -1,18 +1,19 @@
 <?php
-/* @var $this ProyectoController */
-/* @var $model Proyecto */
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
+?>
 
+<?php
 $this->breadcrumbs=array(
-	'Proyectos'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Proyecto'=>array('admin'),
+	'Agregar Proyecto'
 );
-
 $this->menu=array(
-	array('label'=>'List Proyecto', 'url'=>array('index')),
-	array('label'=>'Manage Proyecto', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Proyecto</h1>
+<?php echo BsHtml::pageHeader('Agregar','Proyecto') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -5,11 +5,11 @@
 ?>
 
 <div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
+    'action'=>Yii::app()->createUrl($this->route),
+    'method'=>'get',
 )); ?>
+
 
 	<div class="row">
 		<?php echo $form->label($model,'PUB_CORREL'); ?>
@@ -45,11 +45,9 @@
 		<?php echo $form->label($model,'LIB_CAPLIBRO'); ?>
 		<?php echo $form->textField($model,'LIB_CAPLIBRO',array('size'=>45,'maxlength'=>45)); ?>
 	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
-
+   <div class="form-actions">
+        <?php echo BsHtml::submitButton('Buscar',  array('color' => BsHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

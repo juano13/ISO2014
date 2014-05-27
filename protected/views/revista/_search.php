@@ -4,11 +4,11 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="wide form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+<div class="wide form">
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
+    'action'=>Yii::app()->createUrl($this->route),
+    'method'=>'get',
 )); ?>
 
 	<div class="row">
@@ -46,9 +46,10 @@
 		<?php echo $form->textField($model,'REV_FECHAPUBLICACION'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
+
+   <div class="form-actions">
+        <?php echo BsHtml::submitButton('Buscar',  array('color' => BsHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 
 <?php $this->endWidget(); ?>
 

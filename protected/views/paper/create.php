@@ -1,18 +1,19 @@
 <?php
-/* @var $this PaperController */
-/* @var $model Paper */
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
+?>
 
+<?php
 $this->breadcrumbs=array(
-	'Papers'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Paper'=>array('admin'),
+	'Agregar Paper'
 );
-
 $this->menu=array(
-	array('label'=>'List Paper', 'url'=>array('index')),
-	array('label'=>'Manage Paper', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Paper</h1>
+<?php echo BsHtml::pageHeader('Agregar','Paper') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

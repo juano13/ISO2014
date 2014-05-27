@@ -1,15 +1,16 @@
 <?php
-/* @var $this ProyectoController */
-/* @var $model Proyecto */
+/* @var $this LibroController */
+/* @var $model Libro */
 /* @var $form CActiveForm */
 ?>
 
 <div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
+    'action'=>Yii::app()->createUrl($this->route),
+    'method'=>'get',
 )); ?>
+
+
 
 	<div class="row">
 		<?php echo $form->label($model,'PUB_CORREL'); ?>
@@ -36,10 +37,9 @@
 		<?php echo $form->textField($model,'PRO_DESCRIPCION',array('size'=>60,'maxlength'=>500)); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
-
+   <div class="form-actions">
+        <?php echo BsHtml::submitButton('Buscar',  array('color' => BsHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

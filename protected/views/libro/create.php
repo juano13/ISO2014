@@ -1,18 +1,19 @@
 <?php
-/* @var $this LibroController */
-/* @var $model Libro */
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
+?>
 
+<?php
 $this->breadcrumbs=array(
-	'Libros'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Libros'=>array('admin'),
+	'Agregar Libro'
 );
-
 $this->menu=array(
-	array('label'=>'List Libro', 'url'=>array('index')),
-	array('label'=>'Manage Libro', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Libro</h1>
+<?php echo BsHtml::pageHeader('Agregar','Libro') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

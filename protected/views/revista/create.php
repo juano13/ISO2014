@@ -1,18 +1,18 @@
 <?php
-/* @var $this RevistaController */
-/* @var $model Revista */
-
-$this->breadcrumbs=array(
-	'Revistas'=>array('index'),
-	'Create',
-);
-
-$this->menu=array(
-	array('label'=>'List Revista', 'url'=>array('index')),
-	array('label'=>'Manage Revista', 'url'=>array('admin')),
-);
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
 ?>
 
-<h1>Create Revista</h1>
+<?php
+$this->breadcrumbs=array(
+	'Publicaciones'=>array('//publicacion/index'),
+	'Revista'=>array('admin'),
+	'Agregar Revista'
+);
+$this->menu=array(
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
+);
+?>
+<?php echo BsHtml::pageHeader('Agregar','Revista') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

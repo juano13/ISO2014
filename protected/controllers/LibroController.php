@@ -63,12 +63,14 @@ class LibroController extends Controller
 	public function actionCreate()
 	{
 		$model=new Libro;
+		$public= new Publicacion;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Libro']))
-		{
+		{	
+			$model->PUB_CORREL=$public;
 			$model->attributes=$_POST['Libro'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->PUB_CORREL));

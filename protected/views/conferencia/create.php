@@ -1,18 +1,19 @@
 <?php
-/* @var $this ConferenciaController */
-/* @var $model Conferencia */
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
+?>
 
+<?php
 $this->breadcrumbs=array(
-	'Conferencias'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Conferencia'=>array('admin'),
+	'Agregar Conferencia'
 );
-
 $this->menu=array(
-	array('label'=>'List Conferencia', 'url'=>array('index')),
-	array('label'=>'Manage Conferencia', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Conferencia</h1>
+<?php echo BsHtml::pageHeader('Agregar','Conferencia') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
