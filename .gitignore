@@ -7,3 +7,4 @@ protected/vendors/*
 protected/data/*.db
 framework/*
 !framework/.gitignore
+Resoures/framework.rar
