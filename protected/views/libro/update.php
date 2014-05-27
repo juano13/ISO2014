@@ -3,19 +3,17 @@
 /* @var $model Libro */
 
 $this->breadcrumbs=array(
-	'Libros'=>array('index'),
-	$model->PUB_CORREL=>array('view','id'=>$model->PUB_CORREL),
-	'Update',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Libros'=>array('admin'),
+	$model->LIB_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
+	'Editar',
 );
 
 $this->menu=array(
-	array('label'=>'List Libro', 'url'=>array('index')),
-	array('label'=>'Create Libro', 'url'=>array('create')),
-	array('label'=>'View Libro', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Manage Libro', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
 );
 ?>
 
-<h1>Update Libro <?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Editar Libro',$model->LIB_NOMBRE) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -56,12 +56,12 @@ class Investigadores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'INV_CORREL' => 'Inv Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'INV_NOMBRE' => 'Inv Nombre',
-			'INV_APELLIDOPATERNO' => 'Inv Apellidopaterno',
-			'INV_APELLIDOMATERNO' => 'Inv Apellidomaterno',
-			'INV_ROLE' => 'Inv Role',
+			'INV_CORREL' => 'N° Investigador',
+			'PUB_CORREL' => 'N° Publicacion',
+			'INV_NOMBRE' => 'Nombre Investigador',
+			'INV_APELLIDOPATERNO' => 'Apellido Paterno',
+			'INV_APELLIDOMATERNO' => 'Apellido Materno',
+			'INV_ROLE' => 'Role Investigador',
 		);
 	}
 

@@ -101,7 +101,7 @@ array(
         array('label' => 'Acerca de nosotros','url' => array('/site/about'),'visible' => !Yii::app()->user->isGuest),
          array('label' =>'Contactenos','url' => array('/Site/contact'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Informes','url' => array('/Informe/index'),'visible' => !Yii::app()->user->isGuest),
-        array('label' => 'Personas','url' => array('/Persona/admin'),'visible' => !Yii::app()->user->isGuest),
+        array('label' => 'Usuarios','url' => array('/Usuario/admin'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Login','url' => array('/site/login'),'pull' => BsHtml::NAVBAR_NAV_PULL_RIGHT,'visible' => Yii::app()->user->isGuest),
         array('label' => 'Logout (' . Yii::app()->user->name . ')','pull' => BsHtml::NAVBAR_NAV_PULL_RIGHT,'url' => array('/site/logout'),'visible' => !Yii::app()->user->isGuest)
         ),

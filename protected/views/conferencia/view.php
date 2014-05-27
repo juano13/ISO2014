@@ -3,20 +3,19 @@
 /* @var $model Conferencia */
 
 $this->breadcrumbs=array(
-	'Conferencias'=>array('index'),
-	$model->PUB_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Conferencia'=>array('admin'),
+	$model->CON_NOMBRE,
 );
 
 $this->menu=array(
-	array('label'=>'List Conferencia', 'url'=>array('index')),
-	array('label'=>'Create Conferencia', 'url'=>array('create')),
-	array('label'=>'Update Conferencia', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Delete Conferencia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Conferencia', 'url'=>array('admin')),
+	array('label'=>'Editar Conferencia', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
+	array('label'=>'Borrar Conferencia', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Conferencia #<?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Conferencia',$model->CON_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

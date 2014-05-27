@@ -3,19 +3,16 @@
 /* @var $model Conferencia */
 
 $this->breadcrumbs=array(
-	'Conferencias'=>array('index'),
-	$model->PUB_CORREL=>array('view','id'=>$model->PUB_CORREL),
-	'Update',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Conferencia'=>array('admin'),
+	$model->CON_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
+	'Editar'
 );
-
 $this->menu=array(
-	array('label'=>'List Conferencia', 'url'=>array('index')),
-	array('label'=>'Create Conferencia', 'url'=>array('create')),
-	array('label'=>'View Conferencia', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Manage Conferencia', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
 );
 ?>
 
-<h1>Update Conferencia <?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Editar Conferencia',$model->CON_NOMBRE) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

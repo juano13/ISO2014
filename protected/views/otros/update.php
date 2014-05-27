@@ -3,19 +3,17 @@
 /* @var $model Otros */
 
 $this->breadcrumbs=array(
-	'Otroses'=>array('index'),
-	$model->PUB_CORREL=>array('view','id'=>$model->PUB_CORREL),
-	'Update',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Otra publicacion'=>array('admin'),
+	$model->OTR_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
+	'Editar'
 );
 
 $this->menu=array(
-	array('label'=>'List Otros', 'url'=>array('index')),
-	array('label'=>'Create Otros', 'url'=>array('create')),
-	array('label'=>'View Otros', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Manage Otros', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
 );
 ?>
 
-<h1>Update Otros <?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Editar Otra publicacion',$model->OTR_NOMBRE) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

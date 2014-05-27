@@ -3,16 +3,15 @@
 /* @var $model Usuario */
 
 $this->breadcrumbs=array(
-	'Usuarios'=>array('index'),
-	'Create',
+	'Usuarios'=>array('Admin'),
+	'Crear Usuario',
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Usuario</h1>
+<?php echo BsHtml::pageHeader('Agregar','Usuario') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

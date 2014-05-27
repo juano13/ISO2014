@@ -55,11 +55,11 @@ class Paper extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'PAP_NOMBRE' => 'Pap Nombre',
-			'PAP_TITULO' => 'Pap Titulo',
-			'PAP_FECHAINGRESO' => 'Pap Fechaingreso',
-			'PAP_OBJETIVO' => 'Pap Objetivo',
+			'PUB_CORREL' => 'N° Paper',
+			'PAP_NOMBRE' => 'Nombre Paper',
+			'PAP_TITULO' => 'Titulo',
+			'PAP_FECHAINGRESO' => 'Fecha Ingreso',
+			'PAP_OBJETIVO' => 'Objetivo',
 		);
 	}
 

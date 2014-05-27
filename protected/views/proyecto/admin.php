@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Agregar Libro', 'url'=>array('create')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Agregar Proyecto', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-<?php echo BsHtml::pageHeader('Administrar','Libros') ?>
+<?php echo BsHtml::pageHeader('Administrar','Proyectos') ?>
 <div class="panel panel-default">
     <div class="panel-heading">
         <h3 class="panel-title"><?php echo BsHtml::button('Busqueda avanzada',array('class' =>'search-button', 'icon' => 

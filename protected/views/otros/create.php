@@ -1,18 +1,19 @@
 <?php
-/* @var $this OtrosController */
-/* @var $model Otros */
+/* @var $this BeneficioSocialController */
+/* @var $model BeneficioSocial */
+?>
 
+<?php
 $this->breadcrumbs=array(
-	'Otroses'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Otros'=>array('admin'),
+	'Agregar Otras Publicaciones'
 );
-
 $this->menu=array(
-	array('label'=>'List Otros', 'url'=>array('index')),
-	array('label'=>'Manage Otros', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Otros</h1>
+<?php echo BsHtml::pageHeader('Agregar','Otras Publicaciones') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

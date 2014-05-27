@@ -54,10 +54,10 @@ class Categoriarevistas extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'CAT_CORREL' => 'Cat Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'CAT_NOMBRE' => 'Cat Nombre',
-			'CAT_DESCRIPCION' => 'Cat Descripcion',
+			'CAT_CORREL' => 'N°  Categoria Revista',
+			'PUB_CORREL' => 'N°  Publicacion',
+			'CAT_NOMBRE' => 'Nombre Categoria Revista',
+			'CAT_DESCRIPCION' => 'Descripcion',
 		);
 	}
 

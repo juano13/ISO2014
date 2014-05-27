@@ -1,7 +1,3 @@
-<?php
-/* @var $this BeneficioSocialController */
-/* @var $model BeneficioSocial */
-?>
 
 <?php
 $this->breadcrumbs=array(

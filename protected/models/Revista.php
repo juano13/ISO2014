@@ -58,13 +58,13 @@ class Revista extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'REV_NOMBRE' => 'Rev Nombre',
-			'REV_TITULO' => 'Rev Titulo',
-			'REV_FECHAINGRESO' => 'Rev Fechaingreso',
-			'REV_NUMEROSERIE' => 'Rev Numeroserie',
-			'REV_VOLUMEN' => 'Rev Volumen',
-			'REV_FECHAPUBLICACION' => 'Rev Fechapublicacion',
+			'PUB_CORREL' => 'N° Revista',
+			'REV_NOMBRE' => 'Nombre Revista',
+			'REV_TITULO' => 'Titulo',
+			'REV_FECHAINGRESO' => 'Fecha Ingreso',
+			'REV_NUMEROSERIE' => 'N° Serie',
+			'REV_VOLUMEN' => 'Volumen',
+			'REV_FECHAPUBLICACION' => 'Fecha Publicacion',
 		);
 	}
 

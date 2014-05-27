@@ -54,11 +54,11 @@ class Editores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'EDI_CORREL' => 'Edi Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'EDI_NOMBRE' => 'Edi Nombre',
-			'EDI_APELLIDOPATERNO' => 'Edi Apellidopaterno',
-			'EDI_APELLIDOMATERNO' => 'Edi Apellidomaterno',
+			'EDI_CORREL' => 'N° Editor',
+			'PUB_CORREL' => 'N° Publicacion',
+			'EDI_NOMBRE' => 'Nombre Editor',
+			'EDI_APELLIDOPATERNO' => 'Apellido Paterno',
+			'EDI_APELLIDOMATERNO' => 'Apellido Materno',
 		);
 	}
 

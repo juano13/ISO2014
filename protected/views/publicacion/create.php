@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Publicacion', 'url'=>array('index')),
 	array('label'=>'Manage Publicacion', 'url'=>array('admin')),
 );
 ?>

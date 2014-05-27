@@ -1,22 +1,19 @@
-<?php
-/* @var $this TesisController */
-/* @var $model Tesis */
 
+<?php
 $this->breadcrumbs=array(
-	'Tesises'=>array('index'),
-	$model->PUB_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Tesis'=>array('admin'),
+	$model->TES_NOMBRE,
 );
 
 $this->menu=array(
-	array('label'=>'List Tesis', 'url'=>array('index')),
-	array('label'=>'Create Tesis', 'url'=>array('create')),
-	array('label'=>'Update Tesis', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Delete Tesis', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Tesis', 'url'=>array('admin')),
+	array('label'=>'Editar Tesis', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
+	array('label'=>'Borrar Tesis', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Tesis #<?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Libro',$model->TES_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

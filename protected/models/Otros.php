@@ -56,11 +56,11 @@ class Otros extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'OTR_NOMBRE' => 'Otr Nombre',
-			'OTR_TITULO' => 'Otr Titulo',
-			'OTR_FECHA' => 'Otr Fecha',
-			'OTR_DESCRIPCION' => 'Otr Descripcion',
+			'PUB_CORREL' => 'N° Publicacion',
+			'OTR_NOMBRE' => 'Nombre',
+			'OTR_TITULO' => 'Titulo',
+			'OTR_FECHA' => 'Fecha',
+			'OTR_DESCRIPCION' => 'Descripcion',
 		);
 	}
 

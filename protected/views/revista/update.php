@@ -3,19 +3,17 @@
 /* @var $model Revista */
 
 $this->breadcrumbs=array(
-	'Revistas'=>array('index'),
-	$model->PUB_CORREL=>array('view','id'=>$model->PUB_CORREL),
-	'Update',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Revista'=>array('admin'),
+	$model->REV_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
+	'Editar'
 );
 
 $this->menu=array(
-	array('label'=>'List Revista', 'url'=>array('index')),
-	array('label'=>'Create Revista', 'url'=>array('create')),
-	array('label'=>'View Revista', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Manage Revista', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
 );
 ?>
 
-<h1>Update Revista <?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Editar Revista',$model->REV_NOMBRE) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

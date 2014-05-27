@@ -54,11 +54,11 @@ class Conferencia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'CON_NOMBRE' => 'Con Nombre',
-			'CON_FECHAINGRESO' => 'Con Fechaingreso',
-			'CON_LUGAR' => 'Con Lugar',
-			'CON_FECHAREALIZACION' => 'Con Fecharealizacion',
+			'PUB_CORREL' => 'N° Publicacion',
+			'CON_NOMBRE' => 'Nombre Conferencia',
+			'CON_FECHAINGRESO' => 'Fecha Ingreso',
+			'CON_LUGAR' => 'Lugar de Realizacion',
+			'CON_FECHAREALIZACION' => 'Fecha Realizacion',
 		);
 	}
 

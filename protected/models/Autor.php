@@ -52,10 +52,10 @@ class Autor extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'AUT_CORREL' => 'Aut Correl',
-			'AUT_NOMBRE' => 'Aut Nombre',
-			'AUT_APELLIDOPATERNO' => 'Aut Apellidopaterno',
-			'AUT_APELLIDOMATERNO' => 'Aut Apellidomaterno',
+			'AUT_CORREL' => 'N° Autor',
+			'AUT_NOMBRE' => 'Nombre Autor',
+			'AUT_APELLIDOPATERNO' => 'Apellido Paterno',
+			'AUT_APELLIDOMATERNO' => 'Apellido Materno',
 		);
 	}
 

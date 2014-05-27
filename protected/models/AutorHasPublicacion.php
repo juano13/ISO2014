@@ -50,8 +50,8 @@ class AutorHasPublicacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'AUT_CORREL' => 'Aut Correl',
-			'PUB_CORREL' => 'Pub Correl',
+			'AUT_CORREL' => 'N° Autor',
+			'PUB_CORREL' => 'N° Publicacion',
 		);
 	}
 

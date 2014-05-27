@@ -56,11 +56,11 @@ class Proyecto extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'PRO_NOMBRE' => 'Pro Nombre',
-			'PRO_TITULO' => 'Pro Titulo',
-			'PRO_FECHAINGRESO' => 'Pro Fechaingreso',
-			'PRO_DESCRIPCION' => 'Pro Descripcion',
+			'PUB_CORREL' => 'N° Proyecto',
+			'PRO_NOMBRE' => 'Nombre Proyecto',
+			'PRO_TITULO' => 'Titulo',
+			'PRO_FECHAINGRESO' => 'Fecha Ingreso',
+			'PRO_DESCRIPCION' => 'Descripcion',
 		);
 	}
 

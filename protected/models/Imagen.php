@@ -52,9 +52,9 @@ class Imagen extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'IMA_CORREL' => 'Ima Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'IMA_IMAGEN' => 'Ima Imagen',
+			'IMA_CORREL' => 'N° Imagen',
+			'PUB_CORREL' => 'N° Publicacion',
+			'IMA_IMAGEN' => 'Imagen',
 		);
 	}
 

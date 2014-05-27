@@ -54,11 +54,11 @@ class Colaboradores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'COL_CORREL' => 'Col Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'COL_NOMBRE' => 'Col Nombre',
-			'COL_APELLIDOPATERNO' => 'Col Apellidopaterno',
-			'COL_APELLIDOMATERNO' => 'Col Apellidomaterno',
+			'COL_CORREL' => 'N° Colaborador',
+			'PUB_CORREL' => 'N° Publicacion',
+			'COL_NOMBRE' => 'Nombre Colaborador',
+			'COL_APELLIDOPATERNO' => 'Apellido Paterno',
+			'COL_APELLIDOMATERNO' => 'Apellido Materno',
 		);
 	}
 

@@ -56,11 +56,11 @@ class Tesis extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'TES_DESCRIPCION' => 'Tes Descripcion',
-			'TES_NOMBRE' => 'Tes Nombre',
-			'TES_TITULO' => 'Tes Titulo',
-			'TES_FECHAINGRESO' => 'Tes Fechaingreso',
+			'PUB_CORREL' => 'N° Tesis',
+			'TES_NOMBRE' => 'Nombre Tesis',
+			'TES_DESCRIPCION' => 'Descripcion',
+			'TES_TITULO' => 'Titulo',
+			'TES_FECHAINGRESO' => 'Fecha Ingreso',
 		);
 	}
 

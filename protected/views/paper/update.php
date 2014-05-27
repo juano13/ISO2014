@@ -3,19 +3,17 @@
 /* @var $model Paper */
 
 $this->breadcrumbs=array(
-	'Papers'=>array('index'),
-	$model->PUB_CORREL=>array('view','id'=>$model->PUB_CORREL),
-	'Update',
+	'Publicaciones'=>array('//publicacion/index'),
+	'Paper'=>array('admin'),
+	$model->PAP_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
+	'Editar'
 );
 
 $this->menu=array(
-	array('label'=>'List Paper', 'url'=>array('index')),
-	array('label'=>'Create Paper', 'url'=>array('create')),
-	array('label'=>'View Paper', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Manage Paper', 'url'=>array('admin')),
+array('label'=>'Cancelar', 'url'=>array('view', 'id'=>$model->PUB_CORREL)),
 );
 ?>
 
-<h1>Update Paper <?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Editar Paper',$model->PAP_NOMBRE) ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

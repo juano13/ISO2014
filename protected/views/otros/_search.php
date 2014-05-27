@@ -1,14 +1,13 @@
 <?php
-/* @var $this OtrosController */
-/* @var $model Otros */
+/* @var $this PaperController */
+/* @var $model Paper */
 /* @var $form CActiveForm */
 ?>
 
 <div class="wide form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+<?php $form=$this->beginWidget('bootstrap.widgets.BsActiveForm', array(
+    'action'=>Yii::app()->createUrl($this->route),
+    'method'=>'get',
 )); ?>
 
 	<div class="row">
@@ -36,10 +35,9 @@
 		<?php echo $form->textField($model,'OTR_DESCRIPCION',array('size'=>60,'maxlength'=>500)); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
-
+   <div class="form-actions">
+        <?php echo BsHtml::submitButton('Buscar',  array('color' => BsHtml::BUTTON_COLOR_PRIMARY,));?>
+    </div>
 <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

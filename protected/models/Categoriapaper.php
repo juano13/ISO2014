@@ -54,10 +54,10 @@ class Categoriapaper extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'CATP_CORREL' => 'Catp Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'CATP_NOMBRE' => 'Catp Nombre',
-			'CATP_DESCRIPCION' => 'Catp Descripcion',
+			'CATP_CORREL' => 'N° Categoria Paper',
+			'PUB_CORREL' => 'N° Publicacion',
+			'CATP_NOMBRE' => 'Nombre Categoria',
+			'CATP_DESCRIPCION' => 'Descripcion',
 		);
 	}
 

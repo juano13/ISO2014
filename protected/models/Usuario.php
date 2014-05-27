@@ -62,17 +62,17 @@ class Usuario extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'USU_CORREL' => 'Usu Correl',
-			'USU_NOMBRE' => 'Usu Nombre',
-			'USU_APELLIDOPATERNO' => 'Usu Apellidopaterno',
-			'USU_APELLIDOMATERNO' => 'Usu Apellidomaterno',
-			'USU_EMAIL' => 'Usu Email',
-			'USU_DIRECCION' => 'Usu Direccion',
-			'USU_FONO' => 'Usu Fono',
-			'USU_USERNAME' => 'Usu Username',
-			'USU_PASSWORD' => 'Usu Password',
-			'USU_ROLE' => 'Usu Role',
-			'USU_GRADO' => 'Usu Grado',
+			'USU_CORREL' => 'N° Usuario',
+			'USU_NOMBRE' => 'Nombre',
+			'USU_APELLIDOPATERNO' => 'Apellido Paterno',
+			'USU_APELLIDOMATERNO' => 'Apellido Materno',
+			'USU_EMAIL' => 'Email',
+			'USU_DIRECCION' => 'Direccion',
+			'USU_FONO' => 'Telefono',
+			'USU_USERNAME' => 'Nombre de Usuario',
+			'USU_PASSWORD' => 'Contraseña',
+			'USU_ROLE' => 'Role Usuario',
+			'USU_GRADO' => 'Grado Academico',
 		);
 	}
 

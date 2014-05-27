@@ -50,8 +50,8 @@ class Publicacion extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Pub Correl',
-			'USU_CORREL' => 'Usu Correl',
+			'PUB_CORREL' => 'N° Publicacion',
+			'USU_CORREL' => 'N° Usuario',
 		);
 	}
 

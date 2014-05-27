@@ -3,20 +3,18 @@
 /* @var $model Otros */
 
 $this->breadcrumbs=array(
-	'Otroses'=>array('index'),
-	$model->PUB_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Otra publicacione'=>array('admin'),
+	$model->OTR_NOMBRE,
 );
-
 $this->menu=array(
-	array('label'=>'List Otros', 'url'=>array('index')),
-	array('label'=>'Create Otros', 'url'=>array('create')),
-	array('label'=>'Update Otros', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Delete Otros', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Otros', 'url'=>array('admin')),
+	array('label'=>'Editar publicacion', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
+	array('label'=>'Borrar publicacion', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Otros #<?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver otra publicacion',$model->OTR_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

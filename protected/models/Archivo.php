@@ -52,9 +52,9 @@ class Archivo extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ARC_CORREL' => 'Arc Correl',
-			'PUB_CORREL' => 'Pub Correl',
-			'ARC_FILE' => 'Arc File',
+			'ARC_CORREL' => 'N° Archivo',
+			'PUB_CORREL' => 'N° Publicacion',
+			'ARC_FILE' => 'Archivo',
 		);
 	}
 

@@ -57,7 +57,7 @@ class Libro extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'PUB_CORREL' => 'Codigo Libro',
+			'PUB_CORREL' => 'N° Libro',
 			'LIB_NOMBRE' => 'Nombre Libro',
 			'LIB_TITULO' => 'Titulo',
 			'LIB_FECHAINGRESO' => 'Fecha ingreso',

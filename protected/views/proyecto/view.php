@@ -3,20 +3,20 @@
 /* @var $model Proyecto */
 
 $this->breadcrumbs=array(
-	'Proyectos'=>array('index'),
-	$model->PUB_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Proyecto'=>array('admin'),
+	$model->PRO_NOMBRE,
 );
 
 $this->menu=array(
-	array('label'=>'List Proyecto', 'url'=>array('index')),
-	array('label'=>'Create Proyecto', 'url'=>array('create')),
-	array('label'=>'Update Proyecto', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Delete Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Proyecto', 'url'=>array('admin')),
+	array('label'=>'Editar Proyecto', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
+	array('label'=>'Borrar Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Proyecto #<?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Proyecto',$model->PRO_NOMBRE) ?>
+
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

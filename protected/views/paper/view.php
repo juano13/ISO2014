@@ -3,20 +3,19 @@
 /* @var $model Paper */
 
 $this->breadcrumbs=array(
-	'Papers'=>array('index'),
-	$model->PUB_CORREL,
+	'Publicaciones'=>array('//publicacion/index'),
+	'Paper'=>array('admin'),
+	$model->PAP_NOMBRE,
 );
 
 $this->menu=array(
-	array('label'=>'List Paper', 'url'=>array('index')),
-	array('label'=>'Create Paper', 'url'=>array('create')),
-	array('label'=>'Update Paper', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
-	array('label'=>'Delete Paper', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Paper', 'url'=>array('admin')),
+	array('label'=>'Editar Paper', 'url'=>array('update', 'id'=>$model->PUB_CORREL)),
+	array('label'=>'Borrar Paper', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->PUB_CORREL),'confirm'=>'Estas seguro de borrar esta publicacion?')),
+	array('label'=>'Atras', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Paper #<?php echo $model->PUB_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Paper',$model->PAP_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

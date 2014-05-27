@@ -40,7 +40,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'PAP_OBJETIVO'); ?>
 		<?php echo $form->textFieldControlGroup($model,'PAP_OBJETIVO',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'PAP_OBJETIVO'); ?>
 	</div>
