@@ -70,8 +70,10 @@ class LibroController extends Controller
 
 		if(isset($_POST['Libro']))
 		{	
-			$model->PUB_CORREL=$public;
+			$public->USU_CORREL='1';
+			$public->save();
 			$model->attributes=$_POST['Libro'];
+			$model->PUB_CORREL=$public->PUB_CORREL;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->PUB_CORREL));
 		}

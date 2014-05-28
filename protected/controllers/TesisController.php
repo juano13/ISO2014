@@ -60,16 +60,19 @@ class TesisController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+public function actionCreate()
 	{
 		$model=new Tesis;
-
+		$public= new Publicacion;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Tesis']))
-		{
+		{	
+			$public->USU_CORREL='1';
+			$public->save();
 			$model->attributes=$_POST['Tesis'];
+			$model->PUB_CORREL=$public->PUB_CORREL;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->PUB_CORREL));
 		}

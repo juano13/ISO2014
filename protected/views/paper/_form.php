@@ -19,11 +19,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->textFieldControlGroup($model,'PUB_CORREL',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'PUB_CORREL'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->textFieldControlGroup($model,'PAP_NOMBRE',array('size'=>45,'maxlength'=>45)); ?>
 		<?php echo $form->error($model,'PAP_NOMBRE'); ?>
 	</div>

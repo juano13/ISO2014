@@ -60,16 +60,19 @@ class RevistaController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+public function actionCreate()
 	{
 		$model=new Revista;
-
+		$public= new Publicacion;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Revista']))
-		{
+		{	
+			$public->USU_CORREL='1';
+			$public->save();
 			$model->attributes=$_POST['Revista'];
+			$model->PUB_CORREL=$public->PUB_CORREL;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->PUB_CORREL));
 		}
