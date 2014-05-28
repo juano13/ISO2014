@@ -13,7 +13,7 @@
 	<![endif]-->
 
 	<!--Bootstrap 3-->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE/css/bootstrap.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -140,8 +140,8 @@ array(
     
 </div><!-- page -->
 
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.Rut.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE//js/bootstrap.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE//js/jquery.Rut.min.js"></script>
 
 </body>
 </html>

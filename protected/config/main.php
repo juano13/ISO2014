@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Sistema Borde Costero',
+	'name'=>'ScienSystem',
 	//'defaultController'=>'Usuario',
     'language'=>'es',
 	'sourceLanguage' => 'es',
@@ -63,10 +63,10 @@ return array(
 		//Configuracion de la BD
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=mydb',
+			'connectionString' => 'mysql:host=http://146.83.198.35;dbname=RPC_ISO2014',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '123456',
+			'username' => 'grupoE',
+			'password' => 'face2014',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
