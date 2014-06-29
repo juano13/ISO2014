@@ -2,7 +2,6 @@
 /* @var $this AutorController */
 /* @var $model Autor */
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
 	'Autor'=>array('admin'),
 	$model->AUT_NOMBRE,
 );

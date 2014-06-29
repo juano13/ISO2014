@@ -13,7 +13,7 @@
 	<![endif]-->
 
 	<!--Bootstrap 3-->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -97,7 +97,7 @@ array(
     'activateParents' => true,
     'items' => array(
         array('label' => 'Inicio','url' => array('/Site/Index'),'visible' => !Yii::app()->user->isGuest),
-        array('label' => 'Publicaciones','url' => array('/publicacion/index'),'visible' => !Yii::app()->user->isGuest),
+        array('label' => 'Publicaciones','url' => array('/publicacion/admin'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Autores','url' => array('/Autor/admin'),'visible' => !Yii::app()->user->isGuest),
         array('label' => 'Acerca de nosotros','url' => array('/site/about'),'visible' => !Yii::app()->user->isGuest),
          array('label' =>'Contactenos','url' => array('/Site/contact'),'visible' => !Yii::app()->user->isGuest),
@@ -131,17 +131,18 @@ array(
 	<?php echo $content; ?>
 
     </div><!--/.fluid-container-->
-	<div class="clear"></div>
+	<div class="clear"></div><br></br>
     <p class="text-center">
-            Copyright &copy; <?php echo date('Y'); ?> para SP Consultores.<br/>
+            Copyright &copy; <?php echo date('Y'); ?> para ScienSystem.<br/>
             Todos los Derechos Reservados.<br/>
             <?php echo Yii::powered(); ?>
     </p>
+
     
 </div><!-- page -->
 
-<script src="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE//js/bootstrap.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>http://146.83.198.35/~grupoE//js/jquery.Rut.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.Rut.min.js"></script>
 
 </body>
 </html>

@@ -3,16 +3,18 @@
 /* @var $model Colaboradores */
 
 $this->breadcrumbs=array(
-	'Colaboradores'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//Publicacion/admin'),
+	'Proyecto'=>array('//Proyecto/admin'),
+	'Agregar Colaborador',
+	Proyecto::model()->PRO_NOMBRE,
+	//Proyecto::model()->findByPk($model->PRO_CORREL)->PRO_NOMBRE=>array('//Proyecto/view/','id'=>$model->PRO_CORREL),
 );
 
 $this->menu=array(
-	array('label'=>'List Colaboradores', 'url'=>array('index')),
-	array('label'=>'Manage Colaboradores', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('//Proyecto/admin')),
 );
 ?>
 
-<h1>Create Colaboradores</h1>
+<?php echo BsHtml::pageHeader('Agregar','Colaborador') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

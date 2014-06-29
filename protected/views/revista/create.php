@@ -5,7 +5,7 @@
 
 <?php
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
+	'Publicaciones'=>array('//publicacion/admin'),
 	'Revista'=>array('admin'),
 	'Agregar Revista'
 );

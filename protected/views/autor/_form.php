@@ -34,6 +34,21 @@
 		<?php echo $form->error($model,'AUT_APELLIDOMATERNO'); ?>
 	</div>
 
+	<div class="row">
+		<?php //echo $form->labelEx($model,'AUT_CORREL') ?>
+		<?php 
+
+		$models = Autor::model()->findAll(); 
+		$data = array(); 
+		
+		foreach ($models as $model1) 
+			$data[$model1->AUT_CORREL] = $model1->AUT_NOMBRE . ' - '. $model1->AUT_APELLIDOPATERNO . ' '. $model1->AUT_APELLIDOMATERNO; 
+		echo $form->dropDownList($model, 'AUT_CORREL', $data ,array('prompt' => 'Seleccione')); ?>
+
+
+	  <?php //echo $form->dropDownListControlGroup($model,'AUT_CORREL',CHtml::listData(Autor::model()->findAll(),'AUT_CORREL','AUT_NOMBRE','AUT_APELLIDOPATERNO'), array('empty' => 'Seleccione Autor')); ?>
+	</div>
+
     <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 <?php $this->endWidget(); ?>
 

@@ -22,7 +22,6 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'COL_CORREL',
-		'PUB_CORREL',
 		'COL_NOMBRE',
 		'COL_APELLIDOPATERNO',
 		'COL_APELLIDOMATERNO',

@@ -3,16 +3,14 @@
 /* @var $model Autor */
 
 $this->breadcrumbs=array(
-	'Autors'=>array('index'),
-	'Create',
+	'Autor'=>array('admin'),
+	'Agregar Autor',
 );
 
 $this->menu=array(
-	array('label'=>'List Autor', 'url'=>array('index')),
-	array('label'=>'Manage Autor', 'url'=>array('admin')),
+	array('label'=>'Cancelar', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Autor</h1>
-
+<?php echo BsHtml::pageHeader('Agregar','Autor') ?>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -3,7 +3,7 @@
 /* @var $model Otros */
 
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
+	'Publicaciones'=>array('//publicacion/admin'),
 	'Otra publicacion'=>array('admin'),
 	$model->OTR_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
 	'Editar'

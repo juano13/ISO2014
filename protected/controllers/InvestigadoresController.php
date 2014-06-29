@@ -60,9 +60,12 @@ class InvestigadoresController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new Investigadores;
+		$pro_inv= new ProyectoHasInvestigadores;
+		$pro_inv->PUB_CORREL=$id;
+
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +73,11 @@ class InvestigadoresController extends Controller
 		if(isset($_POST['Investigadores']))
 		{
 			$model->attributes=$_POST['Investigadores'];
-			if($model->save())
+			if($model->save()){
+				$pro_inv->INV_CORREL=$model->INV_CORREL;
+				$pro_inv->save();
 				$this->redirect(array('view','id'=>$model->INV_CORREL));
+			}
 		}
 
 		$this->render('create',array(

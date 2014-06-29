@@ -3,15 +3,20 @@
 /* @var $model Publicacion */
 
 $this->breadcrumbs=array(
-	'Publicacions'=>array('index'),
-	'Manage',
+	'Publicaciones'
 );
 
 $this->menu=array(
-	array('label'=>'List Publicacion', 'url'=>array('index')),
-	array('label'=>'Create Publicacion', 'url'=>array('create')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Libros', 'url'=>array('//libro/admin')),
+    array('icon' => 'glyphicon glyphicon-tasks','label'=>'Tesis', 'url'=>array('//tesis/admin')),
+    array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Revistas', 'url'=>array('//revista/admin')),
+    array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Conferencias', 'url'=>array('//conferencia/admin')),
+    array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'paper', 'url'=>array('//paper/admin')),
+    array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Proyectos', 'url'=>array('//proyecto/admin')),
+    array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Otros', 'url'=>array('//otros/admin')),
 );
-
+?>
+<!--<?php
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -25,30 +30,27 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<?php echo BsHtml::pageHeader('Administrar','Publicaciones') ?>
+<?php 
 
-<h1>Manage Publicacions</h1>
-
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+$lib=new libro;
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'publicacion-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'PUB_CORREL',
 		'USU_CORREL',
+		//array(
+		//	'name'=>'Nombre',
+		//	'value'=>libro::model()->findByPk($model->PUB_CORREL)->LIB_NOMBRE,
+			//),
 		array(
-			'class'=>'CButtonColumn',
-		),
+					'class'=>'bootstrap.widgets.BsButtonColumn',
+				),
 	),
-)); ?>
+)); 
+
+
+?>
+-->

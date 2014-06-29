@@ -28,12 +28,11 @@ class Colaboradores extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('PUB_CORREL, COL_NOMBRE, COL_APELLIDOPATERNO, COL_APELLIDOMATERNO', 'required'),
-			array('PUB_CORREL', 'length', 'max'=>10),
+			array('COL_NOMBRE, COL_APELLIDOPATERNO', 'required'),
 			array('COL_NOMBRE, COL_APELLIDOPATERNO, COL_APELLIDOMATERNO', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('COL_CORREL, PUB_CORREL, COL_NOMBRE, COL_APELLIDOPATERNO, COL_APELLIDOMATERNO', 'safe', 'on'=>'search'),
+			array('COL_CORREL, COL_NOMBRE, COL_APELLIDOPATERNO, COL_APELLIDOMATERNO', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,7 +54,6 @@ class Colaboradores extends CActiveRecord
 	{
 		return array(
 			'COL_CORREL' => 'N° Colaborador',
-			'PUB_CORREL' => 'N° Publicacion',
 			'COL_NOMBRE' => 'Nombre Colaborador',
 			'COL_APELLIDOPATERNO' => 'Apellido Paterno',
 			'COL_APELLIDOMATERNO' => 'Apellido Materno',
@@ -81,7 +79,6 @@ class Colaboradores extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('COL_CORREL',$this->COL_CORREL,true);
-		$criteria->compare('PUB_CORREL',$this->PUB_CORREL,true);
 		$criteria->compare('COL_NOMBRE',$this->COL_NOMBRE,true);
 		$criteria->compare('COL_APELLIDOPATERNO',$this->COL_APELLIDOPATERNO,true);
 		$criteria->compare('COL_APELLIDOMATERNO',$this->COL_APELLIDOMATERNO,true);

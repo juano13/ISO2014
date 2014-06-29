@@ -1,24 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "investigadores".
+ * This is the model class for table "proyecto_has_colaboradores".
  *
- * The followings are the available columns in table 'investigadores':
- * @property string $INV_CORREL
+ * The followings are the available columns in table 'proyecto_has_colaboradores':
+ * @property string $COL_CORREL
  * @property string $PUB_CORREL
- * @property string $INV_NOMBRE
- * @property string $INV_APELLIDOPATERNO
- * @property string $INV_APELLIDOMATERNO
- * @property string $INV_ROLE
  */
-class Investigadores extends CActiveRecord
+class ProyectoHasColaboradores extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'investigadores';
+		return 'proyecto_has_colaboradores';
 	}
 
 	/**
@@ -29,12 +25,11 @@ class Investigadores extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('INV_NOMBRE, INV_APELLIDOPATERNO, INV_ROLE', 'required'),
-			array('INV_NOMBRE, INV_APELLIDOPATERNO, INV_APELLIDOMATERNO', 'length', 'max'=>20),
-			array('INV_ROLE', 'length', 'max'=>45),
+			array('COL_CORREL, PUB_CORREL', 'required'),
+			array('COL_CORREL, PUB_CORREL', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('INV_CORREL, INV_NOMBRE, INV_APELLIDOPATERNO, INV_APELLIDOMATERNO, INV_ROLE', 'safe', 'on'=>'search'),
+			array('COL_CORREL, PUB_CORREL', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,11 +50,8 @@ class Investigadores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'INV_CORREL' => 'N° Investigador',
-			'INV_NOMBRE' => 'Nombre Investigador',
-			'INV_APELLIDOPATERNO' => 'Apellido Paterno',
-			'INV_APELLIDOMATERNO' => 'Apellido Materno',
-			'INV_ROLE' => 'Role Investigador',
+			'COL_CORREL' => 'N° Colaborador',
+			'PUB_CORREL' => 'N° Publicacion',
 		);
 	}
 
@@ -81,11 +73,8 @@ class Investigadores extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('INV_CORREL',$this->INV_CORREL,true);
-		$criteria->compare('INV_NOMBRE',$this->INV_NOMBRE,true);
-		$criteria->compare('INV_APELLIDOPATERNO',$this->INV_APELLIDOPATERNO,true);
-		$criteria->compare('INV_APELLIDOMATERNO',$this->INV_APELLIDOMATERNO,true);
-		$criteria->compare('INV_ROLE',$this->INV_ROLE,true);
+		$criteria->compare('COL_CORREL',$this->COL_CORREL,true);
+		$criteria->compare('PUB_CORREL',$this->PUB_CORREL,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -96,7 +85,7 @@ class Investigadores extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Investigadores the static model class
+	 * @return ProyectoHasColaboradores the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

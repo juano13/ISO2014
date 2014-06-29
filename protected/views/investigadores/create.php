@@ -3,16 +3,16 @@
 /* @var $model Investigadores */
 
 $this->breadcrumbs=array(
-	'Investigadores'=>array('index'),
-	'Create',
+	'Publicaciones'=>array('//publicacion/admin'),
+	'Proyecto'=>array('//Proyecto/admin'),
+	'Agregar Investigador'
 );
 
 $this->menu=array(
-	array('label'=>'List Investigadores', 'url'=>array('index')),
-	array('label'=>'Manage Investigadores', 'url'=>array('admin')),
+	array('icon' => 'glyphicon glyphicon-plus-sign','label'=>'Volver', 'url'=>array('//Proyecto/admin')),
 );
 ?>
 
-<h1>Create Investigadores</h1>
+<?php echo BsHtml::pageHeader('Agregar','Investigador') ?>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

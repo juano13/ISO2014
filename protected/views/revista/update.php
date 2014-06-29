@@ -3,7 +3,7 @@
 /* @var $model Revista */
 
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
+	'Publicaciones'=>array('//publicacion/admin'),
 	'Revista'=>array('admin'),
 	$model->REV_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
 	'Editar'

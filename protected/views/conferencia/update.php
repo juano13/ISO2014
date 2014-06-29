@@ -3,7 +3,7 @@
 /* @var $model Conferencia */
 
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
+	'Publicaciones'=>array('//publicacion/admin'),
 	'Conferencia'=>array('admin'),
 	$model->CON_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
 	'Editar'

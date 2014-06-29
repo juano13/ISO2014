@@ -16,13 +16,12 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Investigadores #<?php echo $model->INV_CORREL; ?></h1>
+<?php echo BsHtml::pageHeader('Ver Investigador',$model->INV_NOMBRE) ?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'INV_CORREL',
-		'PUB_CORREL',
 		'INV_NOMBRE',
 		'INV_APELLIDOPATERNO',
 		'INV_APELLIDOMATERNO',

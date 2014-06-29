@@ -1,24 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "investigadores".
+ * This is the model class for table "libro".
  *
- * The followings are the available columns in table 'investigadores':
- * @property string $INV_CORREL
+ * The followings are the available columns in table 'libro':
  * @property string $PUB_CORREL
- * @property string $INV_NOMBRE
- * @property string $INV_APELLIDOPATERNO
- * @property string $INV_APELLIDOMATERNO
- * @property string $INV_ROLE
+ * @property string $LIB_NOMBRE
+ * @property string $LIB_TITULO
+ * @property string $LIB_FECHAINGRESO
+ * @property string $LIB_EDICION
+ * @property string $LIB_FECHAPUBLICACION
+ * @property string $LIB_CAPLIBRO
  */
-class Investigadores extends CActiveRecord
+class Libro extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'investigadores';
+		return 'libro';
 	}
 
 	/**
@@ -29,12 +30,13 @@ class Investigadores extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('INV_NOMBRE, INV_APELLIDOPATERNO, INV_ROLE', 'required'),
-			array('INV_NOMBRE, INV_APELLIDOPATERNO, INV_APELLIDOMATERNO', 'length', 'max'=>20),
-			array('INV_ROLE', 'length', 'max'=>45),
+			array('PUB_CORREL, LIB_NOMBRE, LIB_TITULO, LIB_FECHAINGRESO, LIB_EDICION, LIB_FECHAPUBLICACION', 'required'),
+			array('PUB_CORREL', 'length', 'max'=>10),
+			array('LIB_NOMBRE, LIB_EDICION, LIB_CAPLIBRO', 'length', 'max'=>45),
+			array('LIB_TITULO', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('INV_CORREL, INV_NOMBRE, INV_APELLIDOPATERNO, INV_APELLIDOMATERNO, INV_ROLE', 'safe', 'on'=>'search'),
+			array('PUB_CORREL, LIB_NOMBRE, LIB_TITULO, LIB_FECHAINGRESO, LIB_EDICION, LIB_FECHAPUBLICACION, LIB_CAPLIBRO', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,11 +57,13 @@ class Investigadores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'INV_CORREL' => 'N° Investigador',
-			'INV_NOMBRE' => 'Nombre Investigador',
-			'INV_APELLIDOPATERNO' => 'Apellido Paterno',
-			'INV_APELLIDOMATERNO' => 'Apellido Materno',
-			'INV_ROLE' => 'Role Investigador',
+			'PUB_CORREL' => 'N° Libro',
+			'LIB_NOMBRE' => 'Nombre Libro',
+			'LIB_TITULO' => 'Titulo',
+			'LIB_FECHAINGRESO' => 'Fecha ingreso',
+			'LIB_EDICION' => 'Edicion',
+			'LIB_FECHAPUBLICACION' => 'Fecha publicacion',
+			'LIB_CAPLIBRO' => 'Capitulo de libro',
 		);
 	}
 
@@ -81,11 +85,13 @@ class Investigadores extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('INV_CORREL',$this->INV_CORREL,true);
-		$criteria->compare('INV_NOMBRE',$this->INV_NOMBRE,true);
-		$criteria->compare('INV_APELLIDOPATERNO',$this->INV_APELLIDOPATERNO,true);
-		$criteria->compare('INV_APELLIDOMATERNO',$this->INV_APELLIDOMATERNO,true);
-		$criteria->compare('INV_ROLE',$this->INV_ROLE,true);
+		$criteria->compare('PUB_CORREL',$this->PUB_CORREL,true);
+		$criteria->compare('LIB_NOMBRE',$this->LIB_NOMBRE,true);
+		$criteria->compare('LIB_TITULO',$this->LIB_TITULO,true);
+		$criteria->compare('LIB_FECHAINGRESO',$this->LIB_FECHAINGRESO,true);
+		$criteria->compare('LIB_EDICION',$this->LIB_EDICION,true);
+		$criteria->compare('LIB_FECHAPUBLICACION',$this->LIB_FECHAPUBLICACION,true);
+		$criteria->compare('LIB_CAPLIBRO',$this->LIB_CAPLIBRO,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -96,7 +102,7 @@ class Investigadores extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Investigadores the static model class
+	 * @return Libro the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

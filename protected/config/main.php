@@ -54,6 +54,7 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			//'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -63,10 +64,10 @@ return array(
 		//Configuracion de la BD
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=http://146.83.198.35;dbname=RPC_ISO2014',
+			'connectionString' => 'mysql:host=localhost;dbname=mydb',
 			'emulatePrepare' => true,
-			'username' => 'grupoE',
-			'password' => 'face2014',
+			'username' => 'root',
+			'password' => '123456',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(

@@ -52,7 +52,7 @@
 		<?php echo $form->error($model,'LIB_CAPLIBRO'); ?>
 	</div>
 
-    <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
+ <?php echo BsHtml::submitButton('Aceptar', array('color' => BsHtml::BUTTON_COLOR_PRIMARY)); ?>
 
 <?php $this->endWidget(); ?>
 

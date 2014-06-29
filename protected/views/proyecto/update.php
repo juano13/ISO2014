@@ -3,7 +3,7 @@
 /* @var $model Proyecto */
 
 $this->breadcrumbs=array(
-	'Publicaciones'=>array('//publicacion/index'),
+	'Publicaciones'=>array('//publicacion/admin'),
 	'Proyecto'=>array('admin'),
 	$model->PRO_NOMBRE=>array('view','id'=>$model->PUB_CORREL),
 	'Editar'

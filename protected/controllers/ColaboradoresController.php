@@ -60,9 +60,11 @@ class ColaboradoresController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new Colaboradores;
+		$pro_col= new ProyectoHasColaboradores;
+		$pro_col->PUB_CORREL=$id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,8 +72,11 @@ class ColaboradoresController extends Controller
 		if(isset($_POST['Colaboradores']))
 		{
 			$model->attributes=$_POST['Colaboradores'];
-			if($model->save())
+			if($model->save()){
+				$pro_col->COL_CORREL=$model->COL_CORREL;
+				$pro_col->save();
 				$this->redirect(array('view','id'=>$model->COL_CORREL));
+			}
 		}
 
 		$this->render('create',array(
